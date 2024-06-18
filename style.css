@@ -1,23 +1,7 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@900&display=swap");
 
-* {
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  font-family: "Quicksand", sans-serif; 
-}
 
-body {
-  display: flex; 
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  min-height: 100vh; 
-  background: #000; 
-  width: 100%; 
-}
-
+/*Estilo da imagem logo*/
 .logo {
   width: 150px; 
   margin-bottom: 20px; 
@@ -25,25 +9,10 @@ body {
   margin-bottom: 5px;
 }
 
-.container {
-  position: relative; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  flex-direction: column; 
-  background-image: url('fundo.png'); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  padding: 40px; 
-  border: 2px solid #9ca3ab; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.container::before {
-  content: ""; 
-  position: absolute; 
+/* Estilo para o pseudo-elemento ::before do elemento com a classe container */
+.container::before { 
+  content: "";  /*cria um conteúdo vazio antes do conteúdo real do elemento*/
+  position: absolute; /*usamos para colocar esta camada exatamente no lugar certo dentro da nossa caixa */
   top: 0;
   left: 0;
   right: 0;
@@ -53,10 +22,6 @@ body {
   z-index: 0; 
 }
 
-.login, .logo {
-  position: relative; 
-  z-index: 1; 
-}
 
 
 .login {
@@ -64,20 +29,17 @@ body {
   justify-content: center; 
   align-items: center;
   flex-direction: column; 
-  gap: 20px; 
+  gap: 20px; /*coloca um espaço de 20 pixels entre cada item, para que eles não fiquem grudados um no outro.*/
 }
 
-.login h2 {
-  font-size: 2em;
-  color: #9ca3ab; 
-}
+
 
 .login .inputBx {
   width: 100%; 
 }
 
 .login .inputBx label {
-  display: block;
+  display: block;/*Os rótulos(label) irão se comportar como blocos de construção que se empilham*/
   color: #9ca3ab;
   margin-bottom: 5px; 
 }
@@ -92,9 +54,7 @@ body {
   color: #fff; 
 }
 
-.login .inputBx input::placeholder {
-  color: rgba(255, 255, 255, 0.75); 
-}
+
 
 .button {
   width: 100%; 
@@ -116,9 +76,6 @@ body {
   transition: background-color 0.3s ease; 
 }
 
-.button button:hover {
-  background: linear-gradient(to right, #555, #000); 
-}
 
 .social-icons {
   display: flex;
